@@ -14,10 +14,10 @@ int main(){
     while(mes<=0){
                   std::cout<<"Su numero es negativo o cero.\n";
                   std::cout<<"Introduzca aqui un numero entero valido: ";
-                  std::cin>>dia;
+                  std::cin>>mes;
     }
     
-    while(mes<12){
+    while(mes>12){
             std::cout<<"Su numero es mayor que doce.\n";
             std::cout<<"Introduzca aqui un numero entero valido: ";
             std::cin>>mes;        
