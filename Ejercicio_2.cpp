@@ -11,7 +11,7 @@ int main(){
         std::cout<<"Ha ocurrido un error.\n";
         std::cout<<"El importe introducido es 0 o un numero negativo.\n";
         std::cout<<"Introduzca su importe de nuevo aqui: ";
-        std::cin>>dol
+        std::cin>>dol;
   }
   std::cout<<"Su importe es igual a ";
   std::cout<<(dol*0.91);
