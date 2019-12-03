@@ -20,7 +20,7 @@ int main (){
     std::cout<<"Introduzca aqui el tipo de operacion deseada: ";
     std::cin>>operacion;
     
-    while (operacion=='s')||(operacion=='S'){
+    while ((operacion=='s')||(operacion=='S')){
           std::cout<<"Su resultado es: ";
           std::cout<<n1;
           std::cout<<" + ";
@@ -29,7 +29,7 @@ int main (){
           std::cout<<n1+n2;
     }
     
-    while (operacion=='r')||(operacion=='R'){
+    while ((operacion=='r')||(operacion=='R')){
           std::cout<<"Su resultado es: ";
           std::cout<<n1;
           std::cout<<" - ";
@@ -38,7 +38,7 @@ int main (){
           std::cout<<n1-n2;      
     }
     
-    while (operacion=='m')||(operacion=='M'){
+    while ((operacion=='m')||(operacion=='M')){
           std::cout<<"Su resultado es: ";
           std::cout<<n1;
           std::cout<<" X ";
@@ -47,7 +47,7 @@ int main (){
           std::cout<<n1*n2;
     }
     
-    while (operacion=='d')||(operacion=='D'){
+    while ((operacion=='d')||(operacion=='D')){
           while (n2==0){
                 std::cout<<"Ha ocurrido un error.\n Su segundo numero es";
                 std::cout<<" igual a 0";
