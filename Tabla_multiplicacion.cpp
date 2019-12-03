@@ -11,7 +11,7 @@ int main (){
     std::cout<<ntabla;
     std::cout<<"                     *\n";
     std::cout<<"****************************************************\n";
-    //los for funcionan asi: expresion de inicio - condicion - incremento
+    //los for funcionan asi: expresion de inicio - condicion de mantenimiento - incremento
     // cont = cont + 1 = cont ++
     for(int cont=0; cont<=10; cont++){
             std::cout<<ntabla;
