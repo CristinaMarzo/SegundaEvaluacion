@@ -6,13 +6,13 @@ int main(){
     int mes;
     int anno;
     
-    std::cout<<"Bienvenido al programa para obtener una fecha.";
+    std::cout<<"Bienvenido al programa para obtener una fecha.\n";
     
     std::cout<<"Introduzca su numero de dia: ";
     std::cin>>dia;
     
     while (dia<=0){
-          std:cout<<"Su numero de dia no es valido. Es negativo o 0.\n";
+          std::cout<<"Su numero de dia no es valido. Es negativo o 0.\n";
           std::cout<<"Introduzca aqui su numero de dia nuevamente: ";
           std::cin>>dia;
     }
@@ -20,7 +20,7 @@ int main(){
     while (dia>31){
           std::cout<<"Su numero de dia no es valido. Es superior a 31.\n";
           std::cout<<"Introduzca de nuevo su numero de dia aqui: ";
-          std::cin>>dia      
+          std::cin>>dia;      
     }
     
     std::cout<<"Introduzca su numero de mes: ";
@@ -35,7 +35,7 @@ int main(){
     while (mes>12){
           std::cout<<"Su numero de mes no es valido. Es superior a 12.\n";
           std::cout<<"Introduzca de nuevo su numero de mes aqui: ";
-          std::cin>>mes
+          std::cin>>mes;
     }
     
     std::cout<<"Introduzca su numero de anno: ";
