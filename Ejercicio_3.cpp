@@ -19,7 +19,7 @@ int main(){
                   std::cin>>dia;
     }
     
-    while(dia<7){
+    while(dia>7){
             std::cout<<"Su numero es mayor que siete.\n";
             std::cout<<"Introduzca aqui un numero entero valido: ";
             std::cin>>dia;        
