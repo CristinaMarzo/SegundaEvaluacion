@@ -7,7 +7,7 @@ int main(){
     int n3;
     int n4;
     
-    std::cout<<"Este programa solo sirve para numeros enteros.\n";
+    std::cout<<"Este programa solo sirve para multiplicar numeros enteros.\n";
     std::cout<<"Si introduce un numero decimal, el programa no funciona.\n";
     std::cout<<"Introduzca aqui su primer numero: ";
     std::cin>>n1;
