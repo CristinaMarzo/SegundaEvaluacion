@@ -10,7 +10,7 @@ int main(){
     int num;
     
     //Bienvenida
-    std::cout<<"Bienvenid@ al propgrama para comparar un  numero y una palabra";
+    std::cout<<"Bienvenid@ al propgrama para comparar un  numero y una palabra\n";
     //introducir numero a comparar
     std::cout<<"Introduzca su numero: ";
     std::cin>>num;
@@ -20,6 +20,17 @@ int main(){
         std::cout<<"Introduzca su caracter: ";
         std::cin>>palabra[cont];
         }
+    
+    //comparar caracteres con num
+    if (cont==num){
+                   std::cout<<"Su palabra tiene el mismo numero";
+                   std::cout<<" de caracteres que su numero introducido.";
+    }
+    
+    if (cont!=num){
+                   std::cout<<"Su palabra no tiene el mismo numero";
+                   std::cout<<" de caracteres que su numero introducido.";
+    }
     //codigo de escape
     std::cin>>salir;
 }
