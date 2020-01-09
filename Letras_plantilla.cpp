@@ -19,18 +19,47 @@ int devuelve_longitud(char palabra[]){
 int contador_vocales(char palabra[]){
     char vocales[]={'a', 'e', 'i', 'o', 'u'};
     int nvocales;
-    int cont2=0;
+    int cvocales=0;
     int cont=0;
     
     for (cont=0; cont<devuelve_longitud(palabra); cont++){
-    for (nvocales=0; nvocales<5; nvocales++){
-        if (palabra[cont] == vocales[nvocales]){
-                          cont2++;
+        for (nvocales=0; nvocales<5; nvocales++){
+            if (palabra[cont] == vocales[nvocales]){
+                          cvocales++;
+            }
         }
     }
-    }
-    return cont2;
+    return cvocales;
     
+}
+
+int contador_consonantes_bestia(char palabra[]){
+    char consonantes[]={'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'};
+    int nconsonantes;
+    int cconsonantes=0;
+    int cont;
+    
+    for (cont=0; cont<devuelve_longitud(palabra); cont++){
+        for (nconsonantes=0; nconsonantes<22; nconsonantes++){
+            if (palabra[cont]==consonantes[nconsonantes]){
+               cconsonantes++;
+            }
+        }
+    }
+    return cconsonantes;
+}
+
+int contador_consonantes_fino(char palabra[]){
+    int cconsonantes=0;
+    
+    cconsonantes = devuelve_longitud(palabra) - contador_vocales(palabra);
+    return cconsonantes;
+}
+    
+int cambiar_minuscula_por_mayuscula(){
+    //diferencia ascii 32 mayus a minus
+    //sumar char + entero
+
 }
 
 int main(){
@@ -52,6 +81,10 @@ int main(){
             }
         }
     }
+    
+    std::cout<<"\nSu numero de consonantes a lo bestia es: "<<contador_consonantes_bestia(palabra);
+    
+    std::cout<<"\nSu numero de consonantes a lo fino es: "<<contador_consonantes_fino(palabra);
     
     std::cout<<"\nSu palabra troleada es: "<<palabra;
     
