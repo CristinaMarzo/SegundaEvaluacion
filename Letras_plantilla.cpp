@@ -56,10 +56,21 @@ int contador_consonantes_fino(char palabra[]){
     return cconsonantes;
 }
     
-int cambiar_minuscula_por_mayuscula(){
+void cambiar_minuscula_por_mayuscula(char palabra[]){
     //diferencia ascii 32 mayus a minus
     //sumar char + entero
-
+    int cont;
+    
+    for (cont=0;cont<devuelve_longitud(palabra);cont++){
+        if(palabra[cont]>=65 && palabra[cont]<=90){
+              palabra[cont] = palabra[cont]+32;
+        }
+        else{
+              if(palabra[cont]>=97 && palabra[cont]<=122){
+                  palabra[cont] = palabra[cont]-32;
+              }
+        }
+    }
 }
 
 int main(){
@@ -86,7 +97,11 @@ int main(){
     
     std::cout<<"\nSu numero de consonantes a lo fino es: "<<contador_consonantes_fino(palabra);
     
-    std::cout<<"\nSu palabra troleada es: "<<palabra;
+    std::cout<<"\nSu palabra troleada con vocales es: "<<palabra;
+    
+    std::cout<<"\nSu palabra troleada con mayusculas y minusculas es: ";
+    cambiar_minuscula_por_mayuscula(palabra);
+    std::cout<<palabra;
     
     std::cin>>salir;
     
