@@ -47,3 +47,45 @@ void cambiar_minuscula_por_mayuscula(char palabra[]){
         }
     }
 }
+
+int diferencia_longitud(char *palabra1,char *palabra2){
+        int cont;
+        int resultado=0;
+        resultado = devuelve_longitud(palabra1) - devuelve_longitud(palabra2);
+        return(resultado);
+}
+
+void introducir_auxiliar_mover_y_calcular_espacio_necesario(){
+     int cont;
+     char aux[20];
+     char *palabras[4]
+     
+     for (cont=0; cont<4; cont++){
+        std::cout<<"Introduce tu palabra: ";
+        std::cin>>aux;
+        longitud = devuelve_longitud(aux);
+        palabras[cont] = (char *)malloc((longitud+1)*(sizeof(char)));//reserva. que calcule los bits, porque no lo calcula el automaticamente
+        //si te comes el +1 es un error aleatorio
+        //conversion forzada: de lo que de malloc lo transforma en un puntero caracter para que no pete
+        //malloc = memory allocation
+        strcpy(palabras[cont], aux);//string copy. destino, origen
+        //expera que los dos parametros sean las posiciones de memoria de la primera letra de cada una de las palabras
+     }
+}
+
+void bubble_sort_orden_alfabetico(char *palabras[]){
+     int veces;
+     int cont;
+     char *paux;
+     
+     for (veces=1; veces<4; veces++){//para asegurarnos esta ordenado tiene que repetirse n - 1 veces
+        for (cont=0; cont<3; cont++){
+            if (strcmp(palabras[cont], palabras[cont+1])>0){ //intercambio a 3 bandas
+               paux = palabras[cont];
+               palabras[cont] = palabras[cont+1];
+               palabras[cont+1] = paux;
+               }
+            }
+     }
+}
+
