@@ -6,17 +6,16 @@
 
 using namespace std;
 
-int diferencia_longitud(palabras[]){
+int diferencia_longitud(char *palabra1,char *palabra2){
+        int cont;
         int resultado=0;
-        for (cont=0; cont<4; cont++){
-            resultado = devuelve_longitud(palabras[cont]) - devuelve_longitud(palabras[cont+1])
-            }
-        return resultado;
+        resultado = devuelve_longitud(palabra1) - devuelve_longitud(palabra2);
+        return(resultado);
 }
 
 int main(){
     char salir;
-    char *palabras[4];//OJO: si me dejo el asteruisco, no me puede guardar el numero hexadecimal de la posicion
+    char *palabras[4];//OJO: si me dejo el asterisco, no me puede guardar el numero hexadecimal de la posicion
     int cont;
     char aux[20];
     int longitud = 0;
@@ -43,9 +42,9 @@ int main(){
     
     //ORDENAMOS POR EL METODO DE LA BURBUJA
     //strcmp = string comparation
-    for (veces=1; veces<4; veces++){//para asegurarnos esta ordenado tiene que repetirse n - 1 veces
+    for(veces=1; veces<4; veces++){//para asegurarnos esta ordenado tiene que repetirse n - 1 veces
         for (cont=0; cont<3; cont++){
-            if (resultado>0){ //intercambio a 3 bandas
+            if (diferencia_longitud(palabras[cont],palabras[cont+1])>0){ //intercambio a 3 bandas
                paux = palabras[cont];
                palabras[cont] = palabras[cont+1];
                palabras[cont+1] = paux;
