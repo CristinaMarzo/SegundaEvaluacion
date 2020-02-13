@@ -6,7 +6,7 @@
 
 int main(){
     char salir;
-    char *palabras[4];//OJO: si me dejo el asteruisco, no me puede guardar el numero hexadecimal de la posicion
+    char *palabras[4];//OJO: si me dejo el asterisco, no me puede guardar el numero hexadecimal de la posicion
     int cont;
     char aux[20];
     int longitud = 0;
