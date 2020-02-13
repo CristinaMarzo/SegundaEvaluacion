@@ -9,14 +9,14 @@
            el hace:
                    char *palabras[4]; --> siginfica que estamos guardando un vector de cuatro casillas y en
                    cada una de ellas hay un puntero hexadecimal de cada parte del array de ellas
-    ordenador iempre ejecuta de forma lineal
-    reservarf que cada columna colgante tenga la misma longitud, utilizando la memoria dinamica del ordenador
+    ordenador siempre ejecuta de forma lineal
+    reservar que cada columna colgante tenga la misma longitud, utilizando la memoria dinamica del ordenador
     dynamic memory allocation (reserva dinamica de memoria) --> programacion orientada a objetos*/
     
 /*asignar datos: entero, float, char, array. array tiene las posiciones contiguas / consecutivas.
-cuando yo dcklaro una variable lo que guardo es la posicion de memoria. si con printf pusiera un * le diria que salte al contenido.
+cuando yo declaro una variable lo que guardo es la posicion de memoria. si con printf pusiera un * le diria que salte al contenido.
 char *palabras[4] --> estoy haciendo un vector de 4 posiciones que contiene 4 direcciones hexadecimales
-cuando declaras la viarbvle el * siginifica que guarde la direccion hexadecimal y cuando la estas reclamando significa que salte al contenido
+cuando declaras la variable el * siginifica que guarde la direccion hexadecimal y cuando la estas reclamando significa que salte al contenido
 palabra a secas es la direccion / casilla de la primera casilla de palabra
 palabra:
         vamos
