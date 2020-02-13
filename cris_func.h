@@ -55,10 +55,10 @@ int diferencia_longitud(char *palabra1,char *palabra2){
         return(resultado);
 }
 
-void introducir_auxiliar_mover_y_calcular_espacio_necesario(){
+void introducir_auxiliar_mover_y_calcular_espacio_necesario(char *palabras[]){ //este void no funciona, pero se ha intentado
      int cont;
      char aux[20];
-     char *palabras[4]
+     int longitud=0;
      
      for (cont=0; cont<4; cont++){
         std::cout<<"Introduce tu palabra: ";
@@ -73,7 +73,7 @@ void introducir_auxiliar_mover_y_calcular_espacio_necesario(){
      }
 }
 
-void bubble_sort_orden_alfabetico(char *palabras[]){
+void bubble_sort_orden_alfabetico(char *palabras[]){ //este tampoco me funciona, me salta error de conversion de char * a char **
      int veces;
      int cont;
      char *paux;
@@ -89,3 +89,26 @@ void bubble_sort_orden_alfabetico(char *palabras[]){
      }
 }
 
+void multiplicar_4_numeros_int (int numeros[]){
+  int resultado = 0;
+  resultado = numeros[1]*numeros[2]*numeros[3]*numeros[0];
+}
+
+int devuelve_consonantes(char *palabra[]){
+    int longitud=0;
+    int cont=0;
+    char vocales[]={'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+    int nvocales=0;
+    
+    for (cont=0; cont<devuelve_longitud(*palabra); cont++){
+       while (*palabra[cont]!='\0'){ //distinguir la longitud total de la palabra
+             for(nvocales=0; nvocales<10; nvocales++){ //ir contando las vocales
+                             while (*palabra[cont] == vocales[nvocales]){ //ir comparando. positivo, contar una mas en longitud
+                                   longitud++;
+                             }
+             }
+             cont++; //ir corriendo la letra
+       }
+    }
+    return (longitud); //resultado
+}
